@@ -1,0 +1,99 @@
+:root {
+  --background-light: #ffffff;
+  --text-dark-primary: #282828;
+  --text-dark-secondary: #707070;
+  --text-dark-highlight: #0c71c3;
+  --icon-bg-dark: #e5de44;
+  --background-dark: #001a26;
+  --text-light-primary: #ffffff;
+  --text-light-secondary: #bbbbbb;
+  --text-light-highlight: #0bb5ff;
+  --icon-bg-light: #053752;
+}
+body {
+  min-height: 90vh;
+  font-size: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  padding: 2rem 10% 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  transition: background-color 0.25s linear;
+  color: var(--text-light-primary);
+  background-color: var(--background-dark);
+}
+
+main {
+  margin-bottom: 2rem;
+}
+
+a {
+  text-decoration: underline;
+  font-weight: 500;
+  color: var(--text-light-primary);
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: var(--text-light-highlight);
+}
+
+h1 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h5 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 0.75;
+}
+
+h6 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 0.75;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 400;
+  padding-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+footer {
+  margin-top: 2rem;
+}

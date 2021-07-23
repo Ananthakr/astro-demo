@@ -1,0 +1,30 @@
+---
+// Component Imports
+import Header from '../components/Header.astro';
+import Article from '../components/Article.astro';
+import Promoted from"../components/Promoted.jsx";
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'Welcome to my blog';
+
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style/global.css">
+    
+</head>
+<body> 
+    <Header/>
+   <Article content="lorem ipsum home"/>
+    <Promoted client:visible/>
+</body>
+</html>
