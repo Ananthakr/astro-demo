@@ -1,0 +1,46 @@
+---
+// Component Imports
+import Header from '../components/Header.astro';
+import Article from '../components/Article.astro';
+
+
+export async function createCollection() {
+
+  const posts = [
+    {
+        slug:"lorem",
+        id:1,
+        title:"Astro collection post",
+        content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tempus imperdiet nulla malesuada pellentesque elit. Id volutpat lacus laoreet non curabitur. Necsagittis aliquam malesuada bibendum. Libero id faucibus nisl tincidunt eget nullam non nisi est. In nulla posuere sollicitudin aliquam ultrices sagittis orci a. Semper risus in hendrerit gravida rutrum quisque non. Platea dictumst quisque sagittis purus sit."
+    }
+]
+
+  return {
+    route: `/posts/:slug`,
+    paths() {
+      return posts.map((post, i) => ({params: {slug: post.slug}}));
+    },
+    async props({ params }) {
+      return {item: posts.find((post) => post.slug === params.slug)};
+    },
+  };
+}
+
+const {item} = Astro.props;
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{item.title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="stylesheet" href="/style/global.css">
+    
+</head>
+<body> 
+    <Header/>
+    <Article title={item.title}>
+        <p>{item.content}</p>
+    </Article>
+</body>
+</html>
